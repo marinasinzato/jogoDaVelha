@@ -33,6 +33,7 @@ function mensagemEmpate() {
   alert("Empate!");
   document.getElementById("empate").innerHTML = empate;
   empate += 1;
+//   TA ERRADO ALI OH LINHA
   qtdRodadas += 1;
   document.getElementById("rodada").innerHTML = qtdRodadas + " RODADAS";
 }
