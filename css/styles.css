@@ -1,0 +1,174 @@
+:root {
+  --bgcolor: #192A32;
+  --player1: #2DC2C0;
+  --player2: #EEAF34;
+  --button1: #A7BDC9;
+  --button2: #1F3540;
+  --shadow: 2px 2px 8px #0000003d;
+  --gap: 12px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bgcolor);
+  width: 100%;
+  height: 100vh;
+  min-height: 700px; /* para usar tem celulares landscape */
+  min-width: 340px;
+
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#game {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 90%;
+  padding: 10px;
+  aspect-ratio: 2 / 3;
+}
+
+#game header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10%;
+  margin-bottom: 10px;
+  gap: var(--gap);
+}
+
+#game header .cell {
+  display: flex;
+  height: 100%;
+  width: 33.3%;
+  align-items: center;
+  justify-content: center;
+}
+
+#game header .round-label {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0px 10px;
+  margin: 0px 10px;
+  border-radius: 8px;
+  color: var(--button1);
+  background-color: var(--button2);
+}
+
+#game header .players {
+  display: flex;
+  justify-content: flex-start;
+  gap: var(--gap);
+}
+
+#game header .reset {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#game header .reset button {
+  background-color: var(--button1);
+  display: flex;
+  height: 100%;
+  aspect-ratio: 1/1 ;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  border: none;
+  box-shadow: var(--shadow);
+}
+
+#game footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 15%;
+  gap: var(--gap);
+  margin-top: 10px;
+}
+
+.footer-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 33.3%;
+  height: 90%;
+  border-radius: 8px;
+  font-size: 0.8em;
+}
+
+#board {
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  height: 75%;
+  justify-content: space-between;
+  gap: var(--gap);
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  height: 33.3%;
+  gap: var(--gap);
+}
+
+#board .cell {
+  aspect-ratio: 1/1;
+  background-color: var(--button2);
+  border-radius: 8px;
+  border: none;
+  box-shadow: var(--shadow);
+  width: calc(100%/3);
+}
+
+#board .cell img {
+  aspect-ratio: 1/1;
+  width: 50%;
+}
+
+.win-container {
+ background-color: var(--player1);
+}
+
+.ties-container {
+  background-color: var(--button1);
+}
+
+.cpu-container {
+  background-color: var(--player2);
+}
+
+.total-number {
+  font-size: 1.7em;
+  font-weight: bold;
+}
+
+.player-x {
+  background: url(./x.svg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 50%;
+  aspect-ratio: 1/1;
+}
+
+.player-o {
+  background: url(./o.svg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 50%;
+  aspect-ratio: 1/1;
+}
+
+@media screen and (min-width: 600px) {
+  /* fixa largura do jogo em telas grandes */
+  #game {
+    width: 400px;
+  }
+}

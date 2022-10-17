@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/script.js"></script>
+  <title>Jogo da Velha</title>
+</head>
+<body>
+  <div id="game">
+    <header>
+      <div class="cell players">
+        <div>
+          <img src="x.svg" alt="jogador X" id="player2" />
+        </div>
+        <div>
+          <img src="o.svg" alt="jogador O" id="player1" />
+        </div>
+      </div>
+      <div id="rodada" class="cell round-label">
+        0 RODADA
+      </div>
+      <div class="cell reset">
+        <button onclick="reset()">
+          <img src="reset.svg" alt="Reiniciar jogo" />
+        </button>
+      </div>
+    </header>
+    <div id="board">
+      <div class="row">
+        <button id="celula_0" class="cell" onclick="jogada(0)">&nbsp;</button>
+        <button id="celula_1" class="cell" onclick="jogada(1)">&nbsp;</button>
+        <button id="celula_2" class="cell" onclick="jogada(2)">&nbsp;</button>
+      </div>
+      <div class="row">
+        <button id="celula_3" class="cell" onclick="jogada(3)">&nbsp;</button>
+        <button id="celula_4" class="cell" onclick="jogada(4)">&nbsp;</button>
+        <button id="celula_5" class="cell" onclick="jogada(5)">&nbsp;</button>
+      </div>
+      <div class="row">
+        <button id="celula_6" class="cell" onclick="jogada(6)">&nbsp;</button>
+        <button id="celula_7" class="cell" onclick="jogada(7)">&nbsp;</button>
+        <button id="celula_8" class="cell" onclick="jogada(8)">&nbsp;</button>
+      </div>
+    </div>
+    <footer>
+      <div class="footer-item win-container">
+        <label>X (você)</label>
+        <div class="total-number" id="ganhadorX">0</div>
+      </div>
+      <div class="footer-item ties-container">
+        <label>EMPATES</label>
+        <div class="total-number" id="empate">0</div>
+      </div>
+      <div class="footer-item cpu-container">
+        <label>O (CPU)</label>
+        <div class="total-number" id="ganhadorO">0</div>
+      </div>
+    </footer>
+  </div>
+  
+</body>
+</html>
